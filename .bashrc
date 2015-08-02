@@ -3,28 +3,45 @@ alias ..="cd .."
 alias rm="rm -i"
 
 # usage: service_start apache2
-function service_start () {
+function service_start ()
+{
     sudo /etc/init.d/"$1" start
 }
 
 # usage: service_stop mysql
-function service_stop () {
+function service_stop ()
+{
     sudo /etc/init.d/"$1" stop
 }
 
 # usage: service_restart cron
-function service_restart () {
+function service_restart ()
+{
     sudo /etc/init.d/"$1" restart
 }
 
 # usage: search_text "start()" /var/www
-function search_text () {
+function search_text ()
+{
     sudo egrep --color -r "$1" "$2"
 }
 
 # usage: search_file index.php /var/www
-function search_file() {
+function search_file()
+{
     sudo find "$2" -name "$1"
+}
+
+# usage: compress logs.gz /foo/logs
+function compress()
+{
+	tar -zcvf "$1" "$2"
+}
+
+# usage: uncompress logs.gz
+function uncompress()
+{
+	tar -zxvf "$1"
 }
 
 export VISUAL=vim

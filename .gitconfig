@@ -1,0 +1,43 @@
+[user]
+	name  = USER_NAME
+	email = USER_EMAIL
+[color]
+    diff        = auto
+    status      = auto
+    branch      = auto
+    interactive = auto
+    ui          = true
+    pager       = true
+[color "branch"]
+    current = yellow reverse
+    local   = yellow
+    remote  = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old  = red bold
+    new  = green bold
+[color "status"]
+    added     = green
+    changed   = red
+    untracked = yellow
+[credential]
+    helper = cache --timeout=36000
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    cb = checkout -b
+    br = branch
+    d  = diff HEAD
+    b  = browse
+    bi = browse -- issues
+[rerere]
+    enabled = true
+[push]
+    default = current
+[branch]
+    autosetuprebase = always
+    rebase          = true
+[pull]
+    default = current
