@@ -44,6 +44,36 @@ function uncompress()
 	tar -zxvf "$1"
 }
 
+function commit()
+{
+    git commit -am "$1"
+}
+
+function push()
+{
+    git push
+}
+
+function pull()
+{
+    git pull
+}
+
+function diff()
+{
+    git diff
+}
+
+function status()
+{
+    git status
+}
+
+function add()
+{
+    git add -A
+}
+
 export VISUAL=vim
 export EDITOR=vim
 
